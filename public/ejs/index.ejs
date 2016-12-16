@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FRB Page</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="../css/style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div class="jumbotron data-container" id='loan-trend-container'>
+    <div class="header text-center" id="loan-header"><h1>Commercial Lending Data</h1></div>
+	<div class="container" id="loan-canvas-container">
+      
+        <div class="row">
+            <div class="panel loan-panel">
+                <div class="panel-header clearfix">
+                    <h3 class="loan-title text-center">Commercial Real Estate</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="cre-container"></div>
+                </div>
+            </div>
+        </div>        
+        
+        <div class="row">
+            <div class="panel loan-panel">
+                <div class="panel-header clearfix">
+                    <h3 class="loan-title text-center">Commercial and Industrial Loans</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="cni-container"></div>
+                </div>
+            </div>
+        </div> 
+
+        <div class="row">
+            <div class="panel loan-panel">
+                <div class="panel-header clearfix">
+                    <h3 class="loan-title text-center">Mortgage Loans</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="mortgage-container"></div>
+                </div>
+            </div>
+        </div>
+ 
+         <div class="row">
+            <div class="panel loan-panel">
+                <div class="panel-header clearfix">
+                    <h3 class="loan-title text-center">Credit Card Loans</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="card-container"></div>
+                </div>
+            </div>
+        </div>
+ 
+<!--         <table class="table table-hover table-striped" id="loan-table">
+            <th>
+                <td>Loan Type</td>
+                <td>Outstandings $BN</td>
+                <td>Charge-Off %</td>
+                <td>Delinquency %</td>
+            </th>
+        </table> -->
+	</div>
+</div>
+
+<div class="jumbotron data-container" id='rate-trend-container'>
+    <div class="header text-center" id="rate-header"><h1>Interest Rate Dashboard</h1></div>
+        <div class="row text-center">
+            <button type="button" class="btn btn-secondary rate-request">Weekly</button>
+            <button type="button" class="btn btn-secondary rate-request">Monthly</button>
+            <button type="button" class="btn btn-secondary rate-request">Quarterly</button>
+        </div>
+	<div class="container" id="rate-canvas-container">
+    
+        <div class="row">
+            <div class="panel rate-panel">
+                <div class="panel-header clearfix">
+                    <h3 class="rate-title text-center">Lending Rates</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="rate-container"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="panel rate-panel">
+                <div class="panel-header clearfix">
+                    <h3 class="rate-title text-center">Key Rate Spreads</h3>
+                </div>
+                <div class="panel-body">
+                    <div id="spread-container"></div>
+                </div>
+            </div>
+        </div>       
+
+	</div>
+
+</div>
+
+
+<script  src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.bundle.js"></script>
+<script type="text/javascript" src="../javascript/index.js"></script>
+
+</body>
+</html>
+
